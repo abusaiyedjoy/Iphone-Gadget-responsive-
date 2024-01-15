@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  margin: auto;
+  background: rgba(168, 178, 152, 0.427);
+}
+nav {
+  position: relative;
+  z-index: 1;
+  background: #ecf2f3;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: auto;
+  height: 100px;
+  padding: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 50px;
+  border-radius: 0 0 100% 100%;
+}
+nav div {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+}
+nav > div ul li {
+  list-style: none;
+}
+nav div ul li a {
+  position: relative;
+  text-decoration: none;
+  font-weight: 400;
+  color: #090909;
+}
+nav div ul li a::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #000;
+  top: 100%;
+  left: 0;
+  transition: 0.3s;
+}
+nav div ul li a:hover::before {
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+.nav-img {
+  gap: 15px;
+  color: black;
+  cursor: pointer;
+}
+
+/* Banner Section */
+.banner {
+  position: absolute;
+  top: 10px;
+  height: 80vh;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  background: linear-gradient(150deg, #a5d6e4 3.06%, #abdde8 33.08%);
+}
+.banner img {
+    margin-top: 80px;
+  width: 25rem;
+  height: 30rem;
+}
+.banner-text h1 {
+  color: #090909;
+  width: 33rem;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 125.5%;
+}
+.banner-text p {
+  color: #5c5d60;
+  width: 33rem;
+  height: 6rem;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 125.5%;
+}
+.banner-input {
+  width: 32rem;
+  height: 4rem;
+  border-radius: 15px;
+  background: #fff;
+  padding: 10px;
+}
+.banner-input input {
+  color: rgba(139, 142, 153, 0.7);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 125.5%;
+  width: 21rem;
+  height: 2rem;
+  border: none;
+}
+.btn {
+  width: 8rem;
+  height: 3rem;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  align-items: center;
+  border-radius: 15px;
+  background: #4ab9de;
+  margin-left: 1.3rem;
+}
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+  .mobile {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* margin-bottom: 80px; */
+  }
+  body{
+    width: 100%;
+    margin: 0;
+  }
+  .logo {
+    display: flex;
+    font-size: 25px;
+    font-weight: 800;
+    gap: 5px;
+    padding: 25px 50px;
+  }
+  .menu {
+    padding: 25px 50px;
+  }
+  .menu li,
+  a {
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    color: #090909;
+  }
+  .dropdown li {
+    position: relative;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .dropdown li a::before {
+    position: absolute;
+    content: " ";
+    width: 0;
+    background: #000;
+    top: 100%;
+    left: 0;
+    transition: 0.3s;
+  }
+  .dropdown li a:hover::before {
+    width: 90%;
+    height: 2px;
+  }
+  .dropdown {
+    display: none;
+  }
+  .menu ul > li:hover .dropdown {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+  .banner,.banner-text {
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .banner-text{
+    padding-top: 120px;
+  }
+  .banner-text h1{
+    width: auto;
+    text-align: center;
+    font-size: 50px;
+  }
+  .banner-text p {
+    width: 420px;
+    text-align: center;
+    justify-content: center;
+  }
+  .banner img{
+    width: 350px;
+    height: auto;
+  }
+  .banner-input {
+  width: 400px;
+  height: 4rem;
+  border-radius: 15px;
+  background: #fff;
+  padding: 10px;
+  display: flex;
+}
+}
+
+@media screen and (max-width: 1080px) and (min-width: 768px) {
+  nav {
+    width: 70%;
+    padding: 0 20px 25px 20px;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+  .banner {
+    height: auto;
+    padding-top: 120px;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .banner-text {
+    text-align: center;
+  }
+}
